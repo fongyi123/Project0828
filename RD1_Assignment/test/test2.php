@@ -6,6 +6,49 @@
     // $json = json_decode($data, true);  // Decode json data
     // // 處理取得的 json 資料
     // var_dump($json['records']['locations'][0]['location']);   
+
+
+    //  $ins_qry = 'INSERT INTO json_table(jsonvalues) values ("'.$json.'")';
+    //  $exec_qry = mysqli_query($link,$ins_qry);
+    // $connect->close();
+    
+    // $host="localhost";
+    // $user="root";
+    // $pass="root";
+    // $db="OPENDATA";
+    // $port=8889;
+    // // mysql_query("SET NAMES 'utf8'");
+    // // mysql_select_db($dbname);
+    // $connect= new mysqli($host,$user,$pass,$db,$port) or die("ERROR:could not connect to the database!!!");
+
+    // $datasetDescription = $contenct['datasetDescription'];
+    // $locationName = $connect['locationName'];
+    // $elementName = $connect['elementName'];
+    // $description = $connect['description'];
+    // $startTime = $connect['startTime'];
+    // $endTime = $connect['endTime'];
+    // $dataTime = $connect['dataTime'];
+    // $value = $connect['value'];
+
+    // $query = "insert into weather(datasetDescription, locationName, elementName, description, startTime, endTime, dataTime, value) values('$datasetDescription','$locationName','$elementName','$description','$startTime','$endTime','$value')";
+    // $sql = "SELECT * FROM weather";
+    // 處理取得的 json 資料
+ 
+    // $query = "SELECT * FROM weather";
+
+    // $result = mysql_query("SELECT * FROM weather"); 
+    // while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+    //   　printf ("datasetDescription: %s  locationName: %s", $datasetDescription, $locationName);
+    // }
+  // $result = mysqli_query($link, $sql);
+	
+
+    // $commandText = "select * from weather";
+    // $result = mysqli_query($link, $data);
+    
+    // echo 'Weather <br>';
+    // echo "<table><tr><th>Column</th><th>Type</th><th>Null</th><th>Key</th></tr>";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,7 +1,5 @@
 <?php 
-require_once('connDB1.php')
-
-
+require_once('connDB.php');
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ require_once('connDB1.php')
       background-color: rgb(127, 224, 187);
       text-align: center;
     }
-
+ 
     select {
       width: 100%;
       padding: 16px 20px;
@@ -80,29 +78,29 @@ require_once('connDB1.php')
     <div class="form-group row">
       <label for="city" class="col-6 col-form-label">縣市選擇：</label>
       <div class="col-6">
-        <select id="city" name="city" required="required" class="custom-select" onchange="changeFunc(value);">
-          <option value="01">臺北市</option>
-          <option value="02">新北市</option>
-          <option value="03">桃園市</option>
-          <option value="04">臺中市</option>
-          <option value="05">臺南市</option>
-          <option value="06">高雄市</option>
-          <option value="07">基隆市</option>
-          <option value="08">新竹市</option>
-          <option value="09">嘉義市</option>
-          <option value="10">新竹縣</option>
-          <option value="11">苗栗縣</option>
-          <option value="12">彰化縣</option>
-          <option value="13">南投縣</option>
-          <option value="14">雲林縣</option>
-          <option value="15">嘉義縣</option>
-          <option value="16">屏東縣</option>
-          <option value="17">宜蘭縣</option>
-          <option value="18">花蓮縣</option>
-          <option value="19">臺東縣</option>
-          <option value="20">澎湖縣</option>
-          <option value="21">金門縣</option>
-          <option value="22">連江縣</option>
+        <select id="city" name="city" required="required" class="custom-select">
+          <option value="臺北市">臺北市</option>
+          <option value="新北市">新北市</option>
+          <option value="桃園市">桃園市</option>
+          <option value="臺中市">臺中市</option>
+          <option value="臺南市">臺南市</option>
+          <option value="高雄市">高雄市</option>
+          <option value="基隆市">基隆市</option>
+          <option value="新竹市">新竹市</option>
+          <option value="嘉義市">嘉義市</option>
+          <option value="新竹縣">新竹縣</option>
+          <option value="苗栗縣">苗栗縣</option>
+          <option value="彰化縣">彰化縣</option>
+          <option value="南投縣">南投縣</option>
+          <option value="雲林縣">雲林縣</option>
+          <option value="嘉義縣">嘉義縣</option>
+          <option value="屏東縣">屏東縣</option>
+          <option value="宜蘭縣">宜蘭縣</option>
+          <option value="花蓮縣">花蓮縣</option>
+          <option value="臺東縣">臺東縣</option>
+          <option value="澎湖縣">澎湖縣</option>
+          <option value="金門縣">金門縣</option>
+          <option value="連江縣">連江縣</option>
         </select>
       </div>
     </div>
@@ -112,7 +110,8 @@ require_once('connDB1.php')
       </label>
       <div class="col-6">
         <select id="time" name="time" class="custom-select" required="required">
-          <option value="rainfall">降雨量</option>
+          <option value="MIN_10">一小時降雨量</option>
+          <option value="HOUR_24">一整天降雨量</option>
           <option value="current">當前天氣</option>
           <option value="ftoday">今天預報</option>
           <option value="ftomorrow">未來兩天</option>
@@ -140,13 +139,17 @@ require_once('connDB1.php')
       <img id=img05 src="./images/Taipei_101.jpg" alt="Taipei_101, Taipei, Taiwan" width="50%" height="auto"
         style="display: none;">
     </div>
-    <div class="showData" id="id02" background-color=lightblue>
+    <!-- <div class="showData" id="id02" background-color=lightblue>
       <button onclick="myFunction()">Try it</button>
 
 
-    </div>
+    </div> -->
     <div class="showData" id="id03">
-      
+    <?php require_once('week.php')?>
+    <?php require_once('twodays.php')?>
+    <?php require_once('now.php')?>
+    <?php require_once('rain.php');?>
+
     </div>
 
 

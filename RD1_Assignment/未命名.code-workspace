@@ -4,16 +4,11 @@
 			"path": ".."
 		},
 		{
-			"path": "../../Project0825"
-		},
-		{
 			"path": "../../0817"
 		},
 		{
 			"path": "../../0819"
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Project0826"
-	}
+	"settings": {}
 }
